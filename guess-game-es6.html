@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Guess Game</title>
+    </head>
+    <body>
+        <div id="root"> 
+
+        </div>
+        <script>
+            var name = prompt('Enter your name')
+            console.log('Welcome to the guess game ' + name)
+
+            var targetNumber = Math.round(Math.random() * 100)
+            console.log(targetNumber)
+
+            var maxGuess = 3, playerGuess = 0
+            // initialization, condition, increment / decrement 
+            
+            while(playerGuess < maxGuess) {
+                var guess = parseInt(prompt('Guess my number'))
+                if(guess > targetNumber) {
+                    console.log('OOPS!!! Your guess was high')
+                } else if(guess < targetNumber) {
+                    console.log('OOPS!!! Your guess was low')
+                } else if( guess == targetNumber) {
+                    console.log('Good Job, ' + name + ' you guessed my number')
+                    // loop control 
+                    break 
+                }   
+                playerGuess = playerGuess + 1 // playerGuess += 1 || playerGuess++
+            }
+            
+            if(playerGuess == maxGuess) {
+                console.log('Sorry, you didn\'t get my number, my number was ' + targetNumber)
+            }
+
+            // targetNumber - tn - n
+            // targetNumber - camel casing - variables - function names
+            // target_number - snake casing  
+            // TargetNumber - pascal casing - constructor functions, class 
+            // target-number - kebab casing - file names
+
+            // orderLineItems (camel casing) - OrderLineItems (pascal casing)
+
+        </script>
+    </body>
+</html>
